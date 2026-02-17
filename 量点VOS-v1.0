@@ -1,0 +1,8 @@
+// 核心逻辑：3.5版本
+// 1. 预载 3 层视频提高响应速度
+// 2. WebSocket 独占 JUMP 指令优先级
+if (touchRead(4) < 35) {
+  webSocket.broadcastTXT("JUMP"); // 瞬间发射
+  display.println("WARP!"); 
+  gazeStart = millis();
+}
